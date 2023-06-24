@@ -6,6 +6,8 @@ require("dotenv").config();
 let oneDayDifference = moment().subtract(1, "day").format("YYYY-MM-DD");
 let twoDayDifference = moment().subtract(2, "day").format("YYYY-MM-DD");
 
+console.log(process.env.TOKEN);
+
 const bot = new TelegramBot(process.env.TOKEN, {
   polling: true,
 });
@@ -23,7 +25,6 @@ const getConversionRate = async () => {
     const response = await axios.get(
       "https://alfred-rewane.onrender.com/oanda"
     );
-    console.log(response.data);
     return response.data.message;
   } catch (error) {
     console.error("Error fetching conversion rate:", error);
