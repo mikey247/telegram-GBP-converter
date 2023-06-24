@@ -33,6 +33,7 @@ const sendConversionRate = async () => {
   bot.sendMessage(chatId, message);
 };
 
+console.log("APPLICATION STARTED🚀");
 // Schedule the job to run every hour
 setInterval(sendConversionRate, 3600000);
 // setInterval(sendConversionRate, 15000);
