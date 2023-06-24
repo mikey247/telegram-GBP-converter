@@ -6,8 +6,6 @@ require("dotenv").config();
 let oneDayDifference = moment().subtract(1, "day").format("YYYY-MM-DD");
 let twoDayDifference = moment().subtract(2, "day").format("YYYY-MM-DD");
 
-console.log(process.env.TOKEN);
-
 const bot = new TelegramBot(process.env.TOKEN, {
   polling: true,
 });
